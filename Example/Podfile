@@ -1,9 +1,13 @@
+platform :ios
+
+podspec :path => "../CBZSplashView.podspec"
+
 target 'CBZSplashView', :exclusive => true do
-  pod "CBZSplashView", :path => "../"
+  pod "CBZSplashView", :path => "../Pod/Classes"
 end
 
 target 'Tests', :exclusive => true do
-  pod "CBZSplashView", :path => "../"
+  pod "CBZSplashView", :path => "../Pod/Classes"
 
   pod 'Kiwi'
 end

@@ -19,7 +19,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		9F746C79C28D4CABBC81D2F5 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 796CA811008E499A957BEFCE /* libPods-Tests.a */; };
 		C158469D197EABB100BCE2AB /* CBZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C158469C197EABB100BCE2AB /* CBZAppDelegate.m */; };
-		C15846A7197EABC800BCE2AB /* CBZSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = C15846A4197EABC800BCE2AB /* CBZSplashView.m */; };
 		C15846A8197EABC800BCE2AB /* CBZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C15846A6197EABC800BCE2AB /* CBZViewController.m */; };
 		C15846AD197EABD800BCE2AB /* snapchat.png in Resources */ = {isa = PBXBuildFile; fileRef = C15846A9197EABD800BCE2AB /* snapchat.png */; };
 		C15846AE197EABD800BCE2AB /* twitterIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C15846AA197EABD800BCE2AB /* twitterIcon.png */; };
@@ -61,8 +60,6 @@
 		B64FB19BAFF04F5B891B6AAF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C158469B197EABB100BCE2AB /* CBZAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBZAppDelegate.h; path = Application/CBZAppDelegate.h; sourceTree = "<group>"; };
 		C158469C197EABB100BCE2AB /* CBZAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBZAppDelegate.m; path = Application/CBZAppDelegate.m; sourceTree = "<group>"; };
-		C15846A3197EABC800BCE2AB /* CBZSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBZSplashView.h; path = Classes/CBZSplashView.h; sourceTree = "<group>"; };
-		C15846A4197EABC800BCE2AB /* CBZSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBZSplashView.m; path = Classes/CBZSplashView.m; sourceTree = "<group>"; };
 		C15846A5197EABC800BCE2AB /* CBZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBZViewController.h; path = Classes/CBZViewController.h; sourceTree = "<group>"; };
 		C15846A6197EABC800BCE2AB /* CBZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBZViewController.m; path = Classes/CBZViewController.m; sourceTree = "<group>"; };
 		C15846A9197EABD800BCE2AB /* snapchat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = snapchat.png; path = SupportingFiles/snapchat.png; sourceTree = "<group>"; };
@@ -144,7 +141,6 @@
 			children = (
 				C15846B7197EAE5D00BCE2AB /* Main_iPad.storyboard */,
 				C15846B8197EAE5D00BCE2AB /* Main_iPhone.storyboard */,
-				C15846B1197EABEE00BCE2AB /* Classes */,
 				C15846B0197EABE400BCE2AB /* Images */,
 				C15846AB197EABD800BCE2AB /* UIColor+HexString.h */,
 				C15846AC197EABD800BCE2AB /* UIColor+HexString.m */,
@@ -205,15 +201,6 @@
 				C15846AA197EABD800BCE2AB /* twitterIcon.png */,
 			);
 			name = Images;
-			sourceTree = "<group>";
-		};
-		C15846B1197EABEE00BCE2AB /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				C15846A3197EABC800BCE2AB /* CBZSplashView.h */,
-				C15846A4197EABC800BCE2AB /* CBZSplashView.m */,
-			);
-			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,7 +376,6 @@
 				C15846AF197EABD800BCE2AB /* UIColor+HexString.m in Sources */,
 				C15846A8197EABC800BCE2AB /* CBZViewController.m in Sources */,
 				C158469D197EABB100BCE2AB /* CBZAppDelegate.m in Sources */,
-				C15846A7197EABC800BCE2AB /* CBZSplashView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
