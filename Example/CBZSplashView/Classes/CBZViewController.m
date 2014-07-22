@@ -8,6 +8,7 @@
 
 #import "CBZViewController.h"
 #import "CBZSplashView.h"
+#import "UIColor+HexString.h"
 
 static NSString * const kTwitterIcon = @"twitterIcon";
 static NSString * const kSnapchatIcon = @"snapchatIcon";
@@ -29,7 +30,9 @@ static NSString * const kSnapchatColor = @"FFCC00";
 
 - (void)viewDidAppear:(BOOL)animated
 {
-  CBZSplashView *splashView = [[CBZSplashView alloc] initWithImageNamed:kTwitterIcon backgroundColorHexString:kTwitterColor];
+  UIImage *icon = [UIImage imageNamed:kTwitterIcon];
+  UIColor *color = [UIColor colorWithHexString:kTwitterColor];
+  CBZSplashView *splashView = [[CBZSplashView alloc] initWithIcon:icon backgroundColor:color];
   [self.view addSubview:splashView];
 }
 

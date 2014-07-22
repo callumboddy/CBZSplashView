@@ -26,6 +26,4 @@
  */
 - (instancetype)initWithIcon:(UIImage *)icon backgroundColor:(UIColor *)backgroundColor;
 
-- (instancetype)initWithImageNamed:(NSString *)imageName backgroundColorHexString:(NSString *)hexString;
-
 @end

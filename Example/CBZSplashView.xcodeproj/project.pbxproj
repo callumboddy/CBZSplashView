@@ -146,6 +146,8 @@
 				C15846B8197EAE5D00BCE2AB /* Main_iPhone.storyboard */,
 				C15846B1197EABEE00BCE2AB /* Classes */,
 				C15846B0197EABE400BCE2AB /* Images */,
+				C15846AB197EABD800BCE2AB /* UIColor+HexString.h */,
+				C15846AC197EABD800BCE2AB /* UIColor+HexString.m */,
 				C15846A5197EABC800BCE2AB /* CBZViewController.h */,
 				C15846A6197EABC800BCE2AB /* CBZViewController.m */,
 				C158469B197EABB100BCE2AB /* CBZAppDelegate.h */,
@@ -208,8 +210,6 @@
 		C15846B1197EABEE00BCE2AB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C15846AB197EABD800BCE2AB /* UIColor+HexString.h */,
-				C15846AC197EABD800BCE2AB /* UIColor+HexString.m */,
 				C15846A3197EABC800BCE2AB /* CBZSplashView.h */,
 				C15846A4197EABC800BCE2AB /* CBZSplashView.m */,
 			);
