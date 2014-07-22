@@ -7,6 +7,7 @@
 //
 
 #import "CBZSplashView.h"
+#import "UIColor+HexString.h"
 
 @interface CBZSplashView ()
 @property (nonatomic, strong) UIImage *iconImage;
@@ -22,16 +23,22 @@
   self = [super init];
   if (self) {
     _iconImage = icon;
-    self.backgroundColor = backgroundColor;
-    [self setupView];
+    [self setupViewWithBackgroundColor:backgroundColor];
   }
   return self;
 }
 
-- (void)setupView
+- (instancetype)initWithImageNamed:(NSString *)imageName backgroundColorHexString:(NSString *)hexString
+{
+  return [self initWithIcon:[UIImage imageNamed:imageName] backgroundColor:[UIColor colorWithHexString:hexString]];
+}
+
+
+- (void)setupViewWithBackgroundColor:(UIColor *)backgroundColor
 {
   self.frame = [UIApplication sharedApplication].keyWindow.frame;
-  
+  self.backgroundColor = backgroundColor;
+
   UIImage *img = self.iconImage;
   
   self.imgOriginal = [[UIImageView alloc] init];
@@ -53,7 +60,7 @@
     CGAffineTransform scaleTransform = CGAffineTransformMakeScale(0.75, 0.75);
     self.imgColorFill.transform = scaleTransform;
   } completion:^(BOOL finished) {
-    [UIView animateWithDuration:0.8 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
       CGAffineTransform scaleTransform = CGAffineTransformMakeScale(30, 30);
       self.imgColorFill.transform = scaleTransform;
       self.alpha = 0.0;

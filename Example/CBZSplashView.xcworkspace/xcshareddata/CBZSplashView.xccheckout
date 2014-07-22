@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B64F4E19-B415-47A9-98D1-24D361B213DF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CBZSplashView</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3220E064-DA9B-44AB-A03A-C99432D6DF2F</key>
+		<string>https://github.com/callumboddy/CBZSplashView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Example/CBZSplashView.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3220E064-DA9B-44AB-A03A-C99432D6DF2F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/callumboddy/CBZSplashView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3220E064-DA9B-44AB-A03A-C99432D6DF2F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3220E064-DA9B-44AB-A03A-C99432D6DF2F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CBZSplashView</string>
+		</dict>
+	</array>
+</dict>
+</plist>
