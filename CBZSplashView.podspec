@@ -12,7 +12,9 @@ Pod::Spec.new do |s|
   s.version          = "0.1.0"
   s.summary          = "A Twitter like Splash View"
   s.description      = <<-DESC
-                       An optional longer description of CBZSplashView
+                        A Twitter like Splash View
+                        
+                        Sub in your icon and colour and boom
 
                        * Markdown format.
                        * Don't worry about the indent, we strip it!
@@ -21,7 +23,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Callum Boddy" => "callum.boddy@gmail.com" }
-  s.source           = { :git => "https://github.com/callumboddy/CBZSplashView.git", :branch => 'master'}
+  s.source           = { :git => "https://github.com/callumboddy/CBZSplashView.git", :tag => '0.1.0'}
   # s.social_media_url = 'https://twitter.com/callumboddy'
 
 
