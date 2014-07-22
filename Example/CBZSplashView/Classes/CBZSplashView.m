@@ -28,12 +28,6 @@
   return self;
 }
 
-- (instancetype)initWithImageNamed:(NSString *)imageName backgroundColorHexString:(NSString *)hexString
-{
-  return [self initWithIcon:[UIImage imageNamed:imageName] backgroundColor:[UIColor colorWithHexString:hexString]];
-}
-
-
 - (void)setupViewWithBackgroundColor:(UIColor *)backgroundColor
 {
   self.frame = [UIApplication sharedApplication].keyWindow.frame;
