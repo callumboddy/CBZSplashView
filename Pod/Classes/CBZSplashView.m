@@ -32,15 +32,15 @@
   self.frame = [UIApplication sharedApplication].keyWindow.frame;
   self.backgroundColor = backgroundColor;
 
-  UIImage *img = self.iconImage;
+  UIImage *icon = self.iconImage;
   
   self.imgOriginal = [[UIImageView alloc] init];
   self.imgColorFill = [[UIImageView alloc] init];
-  self.imgOriginal.image = img;
   
-  self.imgColorFill.image = [img imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+  self.imgOriginal.image = icon;
+  
+  self.imgColorFill.image = [icon imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
   self.imgColorFill.tintColor = [UIColor whiteColor];
-  
   self.imgColorFill.frame = CGRectMake(0, 0, 60, 60);
   self.imgColorFill.contentMode = UIViewContentModeScaleAspectFit;
   self.imgColorFill.center = self.center;
@@ -49,16 +49,18 @@
 
 - (void)didMoveToSuperview
 {
+  
+  __weak typeof (self) weakSelf = self;
   [UIView animateWithDuration:0.6 delay:1 usingSpringWithDamping:0.7 initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseInOut animations:^{
     CGAffineTransform scaleTransform = CGAffineTransformMakeScale(0.75, 0.75);
-    self.imgColorFill.transform = scaleTransform;
+    weakSelf.imgColorFill.transform = scaleTransform;
   } completion:^(BOOL finished) {
     [UIView animateWithDuration:0.5 animations:^{
       CGAffineTransform scaleTransform = CGAffineTransformMakeScale(30, 30);
-      self.imgColorFill.transform = scaleTransform;
-      self.alpha = 0.0;
+      weakSelf.imgColorFill.transform = scaleTransform;
+      weakSelf.alpha = 0.0;
     } completion:^(BOOL finished) {
-      [self removeFromSuperview];
+      [weakSelf removeFromSuperview];
     }];
   }];
 }
