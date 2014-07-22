@@ -11,6 +11,8 @@
 Inspired by the Twitter Splash screen.
 
 <img src="Images/twitterGif.gif"/>
+<img src="Images/snapchatexample.gif"/>
+
 
 ## Usage
 
