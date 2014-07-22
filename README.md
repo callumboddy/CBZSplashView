@@ -10,9 +10,16 @@
 
 Inspired by the Twitter Splash screen.
 
-<img src="Images/twitterGif.gif"/>
-<img src="Images/snapchatexample.gif"/>
+Twitter: <a href="https://twitter.com/callumboddy">@callumboddy</a>
 
+<img src="Images/twitterGif.gif"/>
+
+```objective-c
+  UIImage *icon = [UIImage imageNamed:kMyIcon];
+  UIColor *color = [UIColor colorWithHexString:kMyColor];
+  CBZSplashView *splashView = [[CBZSplashView alloc] initWithIcon:icon backgroundColor:color];
+  [self.view addSubview:splashView];
+```
 
 ## Usage
 
