@@ -10,6 +10,8 @@
 
 Inspired by the Twitter Splash screen.
 
+<img src="Images/twitterGif.gif"/>
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
