@@ -5,6 +5,11 @@
 [![License](https://img.shields.io/cocoapods/l/CBZSplashView.svg?style=flat)](http://cocoadocs.org/docsets/CBZSplashView)
 [![Platform](https://img.shields.io/cocoapods/p/CBZSplashView.svg?style=flat)](http://cocoadocs.org/docsets/CBZSplashView)
 
+
+## CBZSplashView
+
+Inspired by the Twitter Splash screen.
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
