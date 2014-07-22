@@ -10,6 +10,8 @@
 
 Inspired by the Twitter Splash screen.
 
+Twitter: <a href="https://twitter.com/callumboddy">@callumboddy</a>
+
 <img src="Images/twitterGif.gif"/>
 
 ```objective-c
