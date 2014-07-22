@@ -1,0 +1,9 @@
+target 'CBZSplashView', :exclusive => true do
+  pod "CBZSplashView", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "CBZSplashView", :path => "../"
+
+  pod 'Kiwi'
+end

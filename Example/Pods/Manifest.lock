@@ -1,0 +1,17 @@
+PODS:
+  - CBZSplashView (0.1.0)
+  - Kiwi (2.3.0)
+
+DEPENDENCIES:
+  - CBZSplashView (from `../`)
+  - Kiwi
+
+EXTERNAL SOURCES:
+  CBZSplashView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CBZSplashView: d541440dbe1bc9950e3780e5c0604c2519b5d891
+  Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
+
+COCOAPODS: 0.33.1
