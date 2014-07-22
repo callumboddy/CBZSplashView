@@ -7,7 +7,6 @@
 //
 
 #import "CBZSplashView.h"
-#import "UIColor+HexString.h"
 
 @interface CBZSplashView ()
 @property (nonatomic, strong) UIImage *iconImage;
@@ -27,12 +26,6 @@
   }
   return self;
 }
-
-- (instancetype)initWithImageNamed:(NSString *)imageName backgroundColorHexString:(NSString *)hexString
-{
-  return [self initWithIcon:[UIImage imageNamed:imageName] backgroundColor:[UIColor colorWithHexString:hexString]];
-}
-
 
 - (void)setupViewWithBackgroundColor:(UIColor *)backgroundColor
 {

@@ -7,7 +7,6 @@
 //
 
 #import "CBZSplashView.h"
-#import "UIColor+HexString.h"
 
 @interface CBZSplashView ()
 @property (nonatomic, strong) UIImage *iconImage;
