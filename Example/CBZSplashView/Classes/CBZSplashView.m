@@ -9,9 +9,9 @@
 #import "CBZSplashView.h"
 
 @interface CBZSplashView ()
+@property (nonatomic, strong) UIColor *backgroundViewColor;
 @property (nonatomic, strong) UIImage *iconImage;
-@property (strong, nonatomic) UIImageView *imgOriginal;
-@property (strong, nonatomic) UIImageView *imgColorFill;
+@property (strong, nonatomic) UIImageView *iconImageView;
 @end
 
 
@@ -22,43 +22,57 @@
   self = [super init];
   if (self) {
     _iconImage = icon;
-    [self setupViewWithBackgroundColor:backgroundColor];
+    _backgroundViewColor = backgroundColor;
   }
   return self;
 }
 
-- (void)setupViewWithBackgroundColor:(UIColor *)backgroundColor
+- (void)willMoveToSuperview:(UIView *)newSuperview
 {
-  self.frame = [UIApplication sharedApplication].keyWindow.frame;
-  self.backgroundColor = backgroundColor;
-
-  UIImage *icon = self.iconImage;
-  
-  self.imgOriginal = [[UIImageView alloc] init];
-  self.imgColorFill = [[UIImageView alloc] init];
-  
-  self.imgOriginal.image = icon;
-  
-  self.imgColorFill.image = [icon imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-  self.imgColorFill.tintColor = [UIColor whiteColor];
-  self.imgColorFill.frame = CGRectMake(0, 0, 60, 60);
-  self.imgColorFill.contentMode = UIViewContentModeScaleAspectFit;
-  self.imgColorFill.center = self.center;
-  [self addSubview:self.imgColorFill];
+  if (!newSuperview) {
+    return;
+  }
+  [self setupViewWithBackgroundColor:self.backgroundViewColor];
 }
 
-- (void)didMoveToSuperview
+- (void)setupViewWithBackgroundColor:(UIColor *)backgroundColor
 {
+  if (!backgroundColor) {
+    return;
+  }
   
-  __weak typeof (self) weakSelf = self;
-  [UIView animateWithDuration:0.6 delay:1 usingSpringWithDamping:0.7 initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+  self.frame = [UIApplication sharedApplication].keyWindow.frame;
+  self.backgroundColor = self.backgroundViewColor;
+
+  self.iconImageView = [UIImageView new];
+  self.iconImageView.image = [self.iconImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+  self.iconImageView.tintColor = self.iconColor;
+  self.iconImageView.frame = CGRectMake(0, 0, self.iconStartSize.width, self.iconStartSize.height);
+  self.iconImageView.contentMode = UIViewContentModeScaleAspectFit;
+  self.iconImageView.center = self.center;
+  
+  [self addSubview:self.iconImageView];
+}
+
+- (void)startAnimation
+{
+  __block __weak typeof(self) weakSelf = self;
+  
+  if (!self.animationDuration) {
+    return;
+  }
+  
+  CGFloat shrinkDuration = self.animationDuration * 0.3;
+  CGFloat growDuration = self.animationDuration * 0.7;
+  
+  [UIView animateWithDuration:shrinkDuration delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseInOut animations:^{
     CGAffineTransform scaleTransform = CGAffineTransformMakeScale(0.75, 0.75);
-    weakSelf.imgColorFill.transform = scaleTransform;
+    weakSelf.iconImageView.transform = scaleTransform;
   } completion:^(BOOL finished) {
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:growDuration animations:^{
       CGAffineTransform scaleTransform = CGAffineTransformMakeScale(30, 30);
-      weakSelf.imgColorFill.transform = scaleTransform;
-      weakSelf.alpha = 0.0;
+      weakSelf.iconImageView.transform = scaleTransform;
+      weakSelf.alpha = 0;
     } completion:^(BOOL finished) {
       [weakSelf removeFromSuperview];
     }];
@@ -71,10 +85,27 @@
 - (CGSize)iconStartSize
 {
   if (!_iconStartSize.height) {
-    _iconStartSize = CGSizeMake(100, 100);
+    _iconStartSize = CGSizeMake(60, 60);
   }
   return _iconStartSize;
 }
+
+- (CGFloat)animationDuration
+{
+  if (!_animationDuration) {
+    _animationDuration = 1.2f;
+  }
+  return _animationDuration;
+}
+
+- (UIColor *)iconColor
+{
+  if (!_iconColor) {
+    _iconColor = [UIColor whiteColor];
+  }
+  return _iconColor;
+}
+
 
 
 @end
