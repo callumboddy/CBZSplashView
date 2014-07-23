@@ -17,8 +17,8 @@ just drop in your logo and choose a background color and you are ready to go.
 I have also added some customization options if you are that way inclined.
 
 Twitter: 
-(I seldom say anything, but when I do you propably want to here it.)
-<a href="https://twitter.com/callumboddy">@callumboddy</a> 
+
+<a href="https://twitter.com/callumboddy">@callumboddy</a> (I seldom say anything, but when I do you propably want to here it.)
 
 <img src="Images/twitterGif.gif"/>
 
