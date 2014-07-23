@@ -21,13 +21,13 @@ Easy as pie:
   UIColor *color = [UIColor colorWithHexString:kMyColor];
   CBZSplashView *splashView = [[CBZSplashView alloc] initWithIcon:icon backgroundColor:color];
   
-  // cusomise duration, icon size, or icon color here;
+  // customize duration, icon size, or icon color here;
   
   [self.view addSubview:splashView];
   [splashView startAnimation];
 ```
   
-or if you want to animate on completion if you want to..
+or you can animate on completion if you want to..
 ```objective-c
 
   [self downloadLoadsOfAmazingContentWithCompletion:^(BOOL success, NSError *error) {
