@@ -10,7 +10,7 @@
 
 Inspired by the Twitter Splash screen.
 
-Create a splash view no disimilar to the one Twitter use.
+Create a splash view not dissimilar to the one Twitter use.
 
 just drop in your logo and choose a background color and you are ready to go.
 
