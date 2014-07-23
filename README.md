@@ -10,10 +10,17 @@
 
 Inspired by the Twitter Splash screen.
 
-Twitter: <a href="https://twitter.com/callumboddy">@callumboddy</a>
+Create a splash view no disimilar to the one Twitter use.
+
+just drop in your logo and choose a background color and you are ready to go.
+
+I have also added some customization options if you are that way inclined.
+
+Twitter: 
+(I seldom say anything, but when I do you propably want to here it.)
+<a href="https://twitter.com/callumboddy">@callumboddy</a> 
 
 <img src="Images/twitterGif.gif"/>
-
 
 Easy as pie:
 ```objective-c
