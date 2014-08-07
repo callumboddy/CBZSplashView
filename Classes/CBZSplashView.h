@@ -28,6 +28,11 @@
 - (void)startAnimation;
 
 /**
+ *  Call to start the animation with completion handler.
+ */
+- (void)startAnimationWithCompletionHandler:(void(^)())completionHandler;
+
+/**
  *  The starting size of the centred icon.
  */
 @property (nonatomic, assign) CGSize iconStartSize;

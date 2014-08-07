@@ -41,7 +41,7 @@
     return;
   }
   
-  self.frame = [UIApplication sharedApplication].keyWindow.frame;
+  self.frame = [[UIScreen mainScreen] bounds];
   self.backgroundColor = self.backgroundViewColor;
 
   self.iconImageView = [UIImageView new];
@@ -55,6 +55,11 @@
 }
 
 - (void)startAnimation
+{
+  [self startAnimationWithCompletionHandler:nil];
+}
+
+- (void)startAnimationWithCompletionHandler:(void(^)())completionHandler;
 {
   __block __weak typeof(self) weakSelf = self;
   
@@ -75,6 +80,9 @@
       weakSelf.alpha = 0;
     } completion:^(BOOL finished) {
       [weakSelf removeFromSuperview];
+      if (completionHandler) {
+        completionHandler();
+      }
     }];
   }];
 }
