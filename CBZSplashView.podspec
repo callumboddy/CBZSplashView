@@ -24,5 +24,5 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/callumboddy'
   s.platform     = :ios, '6.0'
   s.requires_arc = true
-  s.source_files  = 'Pod/Classes', '*.{h,m}'
+  s.source_files  = 'Classes', '*.{h,m}'
 end
