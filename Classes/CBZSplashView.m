@@ -41,7 +41,7 @@
     return;
   }
   
-  self.frame = [UIApplication sharedApplication].keyWindow.frame;
+  self.frame = [[UIScreen mainScreen] bounds];
   self.backgroundColor = self.backgroundViewColor;
 
   self.iconImageView = [UIImageView new];
