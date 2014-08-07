@@ -43,18 +43,29 @@
 - (void)drawRect:(CGRect)rect
 {    
   CGContextRef context = UIGraphicsGetCurrentContext();
+  
+  /* apply the scale around the center of the view */
   CGContextTranslateCTM(context,
-                        CGRectGetMidX(self.bezierPath.bounds),
-                        CGRectGetMidY(self.bezierPath.bounds));
+                        CGRectGetWidth(self.bounds) / 2,
+                        CGRectGetHeight(self.bounds) / 2);
   
   CGContextScaleCTM(context, self.animationScale, self.animationScale);
   CGContextTranslateCTM(context,
-                        -CGRectGetMidX(self.bezierPath.bounds),
-                        -CGRectGetMidY(self.bezierPath.bounds));
+                        -CGRectGetWidth(self.bounds) / 2,
+                        -CGRectGetHeight(self.bounds) / 2);
   
+  /* Add the fill color */
   CGContextAddRect(context, self.bounds);
+  
+  /* Move the context to the middle before adding the shape */
+  CGContextTranslateCTM(context,
+                        (CGRectGetWidth(self.bounds) - CGRectGetWidth(self.bezierPath.bounds)) / 2,
+                        (CGRectGetHeight(self.bounds) - CGRectGetHeight(self.bezierPath.bounds)) / 2);
+  
+  /* Now carve the shape out */
   CGContextAddPath(context, self.bezierPath.CGPath);
   
+  /* Commit an Evens-Odd drawing */
   [self.backgroundViewColor setFill];
   CGContextEOFillPath(context);
 }
@@ -62,7 +73,7 @@
 - (void)startAnimationWithCompletionHandler:(void (^)())completionHandler
 {
   CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(tick:)];
-  [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+  [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
   
   self.displayLink = displayLink;
 }
