@@ -56,6 +56,11 @@
 
 - (void)startAnimation
 {
+  [self startAnimationWithCompletionHandler:nil];
+}
+
+- (void)startAnimationWithCompletionHandler:(void(^)())completionHandler;
+{
   __block __weak typeof(self) weakSelf = self;
   
   if (!self.animationDuration) {
@@ -75,6 +80,9 @@
       weakSelf.alpha = 0;
     } completion:^(BOOL finished) {
       [weakSelf removeFromSuperview];
+      if (completionHandler) {
+        completionHandler();
+      }
     }];
   }];
 }
