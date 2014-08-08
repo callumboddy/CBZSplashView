@@ -7,19 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreGraphics/CoreGraphics.h>
 
+/**
+ *  The abstract class that provides the common interface between all splash view implementations.
+ */
 @interface CBZSplashView : UIView
 
 
 /**
- *  This intializes the view, call addSubview on viewDidAppear.
+ *  This initializer takes a raster image that will be used in the animation.
+ *
+ *  The animation is first scales the image down a bit, then, simultanuously scales it all the way up and fades the view out.
  *
  *  @param icon            The icon image in the centre
  *  @param backgroundColor the background color of the entire view
  *
  *  @return The Splash view
  */
-- (instancetype)initWithIcon:(UIImage *)icon backgroundColor:(UIColor *)backgroundColor;
++ (instancetype)splashViewWithIcon:(UIImage *)icon backgroundColor:(UIColor *)backgroundColor;
+
++ (instancetype)splashViewWithBezierPath:(UIBezierPath *)bezier backgroundColor:(UIColor *)backgroundColor;
 
 
 /**
@@ -41,6 +49,11 @@
  *  total length of animation.
  */
 @property (nonatomic, assign) CGFloat animationDuration;
+
+/**
+ *  The animation applied to the icon
+ */
+@property (nonatomic, strong) CAAnimation *iconAnimation;
 
 /**
  *  the color of the icon

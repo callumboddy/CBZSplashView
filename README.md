@@ -12,7 +12,7 @@ Inspired by the Twitter Splash screen.
 
 Create a splash view not dissimilar to the one Twitter use.
 
-just drop in your logo and choose a background color and you are ready to go.
+Just drop in your raster/vector logo and choose a background color and you are ready to go.
 
 I have also added some customization options if you are that way inclined.
 
@@ -21,10 +21,24 @@ Twitter: <a href="https://twitter.com/callumboddy">@callumboddy</a>
 <img src="Images/twitterGif.gif"/>
 
 Easy as pie:
-```objective-c
+
++ Using a rasterized image:
+```objc
   UIImage *icon = [UIImage imageNamed:kMyIcon];
   UIColor *color = [UIColor colorWithHexString:kMyColor];
-  CBZSplashView *splashView = [[CBZSplashView alloc] initWithIcon:icon backgroundColor:color];
+  CBZSplashView *splashView = [CBZSplashView splashViewWithIcon:icon backgroundColor:color];
+  
+  // customize duration, icon size, or icon color here;
+  
+  [self.view addSubview:splashView];
+  [splashView startAnimation];
+```
+
++ Using a vector image:
+```objc
+  UIBezierPath *icon = [UIBezierPath myIcon]; // Generate path from vector using something like paintCode
+  UIColor *color = [UIColor colorWithHexString:kMyColor];
+  CBZSplashView *splashView = [CBZSplashView splashViewWithBezierPath:icon backgroundColor:color];
   
   // customize duration, icon size, or icon color here;
   
@@ -51,7 +65,7 @@ it, simply add the following line to your Podfile:
 ## Coming Soon
 
 - creating new and unique transitions to select from
-- a vector based implementation, closer to the twitter implementation
+- ~~a vector based implementation, closer to the twitter implementation~~
 - adding support for a background image.
 - adding support for colorWithPatternImage
 
