@@ -8,18 +8,12 @@
 
 #import "CBZVectorSplashView.h"
 
-CGFloat animationFunction(CGFloat input);
-
 @interface CBZVectorSplashView ()
 
-@property (nonatomic, strong) UIBezierPath *bezierPath;
-@property (nonatomic, strong) UIColor *backgroundViewColor;
+@property (nonatomic, copy) void(^animationCompletionHandler)();
 
-/* weak in order to break the potential retain cycle */
-@property (nonatomic, weak) CADisplayLink *displayLink;
-/* animation tracking parameters */
-@property (nonatomic) CGFloat animationScale;
-@property (nonatomic) CGFloat animationTime;
+@property (nonatomic, strong) CAShapeLayer *iconLayer;
+@property (nonatomic, strong) UIColor *backgroundViewColor;
 
 @end
 
@@ -29,75 +23,64 @@ CGFloat animationFunction(CGFloat input);
 {
   self = [super initWithFrame:[[UIScreen mainScreen] bounds]];
   if (self) {
-    /* change default animation duration to 0.6 */
-    self.animationDuration = 0.6f;
-    
-    _bezierPath = bezier;
     _backgroundViewColor = backgroundColor;
-    _animationScale = 1.f;
-    _animationTime = 0.f;
+    _iconLayer = [self _createShapeLayerWithBezierPath:bezier];
     
-    self.backgroundColor = [UIColor clearColor];
+    [self.layer addSublayer:_iconLayer];
+    
+    self.backgroundColor = self.iconColor;
   }
   return self;
 }
 
-- (void)tick:(CADisplayLink *)displayLink
+- (CAShapeLayer *)_createShapeLayerWithBezierPath:(UIBezierPath *)bezier
 {
-  self.animationTime += displayLink.duration;
-  self.animationScale = animationFunction(self.animationTime / self.animationDuration);
+  /* Expand the shape bounds, so when it scales down a bit in the beginning, we have some padding */
+  CGRect shapeBounds = CGRectInset(self.bounds, -CGRectGetWidth(self.bounds), -CGRectGetHeight(self.bounds));
+                                   
+  CGMutablePathRef mutablePath = CGPathCreateMutable();
+  CGPathAddRect(mutablePath, NULL, shapeBounds);
   
-  [self setNeedsDisplay];
+  /* Move the icon to the middle */
+  CGPoint iconOffset = CGPointMake((CGRectGetWidth(self.bounds) - CGRectGetWidth(bezier.bounds)) / 2,
+                                   (CGRectGetHeight(self.bounds) - CGRectGetHeight(bezier.bounds)) / 2);
   
-  if (self.animationTime >= self.animationDuration) {
-    [displayLink invalidate];
-  }
-}
-
-- (void)drawRect:(CGRect)rect
-{    
-  CGContextRef context = UIGraphicsGetCurrentContext();
+  CGAffineTransform iconTransform = CGAffineTransformMakeTranslation(iconOffset.x, iconOffset.y);
   
-  /* Add the fill color */
-  CGContextAddRect(context, self.bounds);
+  CGPathAddPath(mutablePath, &iconTransform, bezier.CGPath);
   
-  /* apply the scale around the center of the view */
-  CGContextTranslateCTM(context,
-                        CGRectGetWidth(self.bounds) / 2,
-                        CGRectGetHeight(self.bounds) / 2);
+  CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+  shapeLayer.bounds = shapeBounds;
+  shapeLayer.position = CGPointMake(CGRectGetWidth(self.bounds) / 2, CGRectGetHeight(self.bounds) / 2);
+  shapeLayer.path = mutablePath;
+  shapeLayer.anchorPoint = CGPointMake(0.5, 0.5);
+  shapeLayer.fillColor = self.backgroundViewColor.CGColor;
   
-  CGContextScaleCTM(context, self.animationScale, self.animationScale);
-  CGContextTranslateCTM(context,
-                        -CGRectGetWidth(self.bounds) / 2,
-                        -CGRectGetHeight(self.bounds) / 2);
+  CGPathRelease(mutablePath);
   
-  
-  /* Move the context to the middle before adding the shape */
-  CGContextTranslateCTM(context,
-                        (CGRectGetWidth(self.bounds) - CGRectGetWidth(self.bezierPath.bounds)) / 2,
-                        (CGRectGetHeight(self.bounds) - CGRectGetHeight(self.bezierPath.bounds)) / 2);
-  
-  /* Now carve the shape out */
-  CGContextAddPath(context, self.bezierPath.CGPath);
-  
-  /* Commit an Evens-Odd drawing */
-  [self.backgroundViewColor setFill];
-  CGContextEOFillPath(context);
+  return shapeLayer;
 }
 
 - (void)startAnimationWithCompletionHandler:(void (^)())completionHandler
 {
-  CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(tick:)];
-  [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+  self.animationCompletionHandler = completionHandler;
   
-  self.displayLink = displayLink;
-  self.animationTime = 0.f;
+  self.iconAnimation.delegate = self;
+  [self.iconLayer addAnimation:self.iconAnimation forKey:@"CBZVectorSplashViewIconAnimation"];
+  
+  /* Reveal the content behind the mask view after the icon expands a bit */
+  [self performSelector:@selector(setBackgroundColor:) withObject:[UIColor clearColor] afterDelay:self.animationDuration * 0.4];
+}
+
+#pragma mark - CAAnimation Delegate methods
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+  if (self.animationCompletionHandler) {
+    self.animationCompletionHandler();
+  }
+  
+  [self removeFromSuperview];
 }
 
 @end
-
-CGFloat animationFunction(CGFloat x)
-{
-  CGFloat result = pow(((x - .16)*4), 4) + 0.84;
-  return result;
-}

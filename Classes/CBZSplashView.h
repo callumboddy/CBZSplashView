@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 /**
  *  The abstract class that provides the common interface between all splash view implementations.
@@ -48,6 +49,11 @@
  *  total length of animation.
  */
 @property (nonatomic, assign) CGFloat animationDuration;
+
+/**
+ *  The animation applied to the icon
+ */
+@property (nonatomic, strong) CAAnimation *iconAnimation;
 
 /**
  *  the color of the icon

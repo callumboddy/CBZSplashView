@@ -60,9 +60,26 @@
 - (CGFloat)animationDuration
 {
   if (!_animationDuration) {
-    _animationDuration = 1.2f;
+    _animationDuration = 1.0f;
   }
   return _animationDuration;
+}
+
+- (CAAnimation *)iconAnimation
+{
+  if (!_iconAnimation) {
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+    animation.values = @[@1, @0.9, @800];
+    animation.keyTimes = @[@0, @0.4, @1];
+    animation.duration = self.animationDuration;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    animation.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
+    
+    _iconAnimation = animation;
+  }
+  return _iconAnimation;
 }
 
 - (UIColor *)iconColor
@@ -72,7 +89,5 @@
   }
   return _iconColor;
 }
-
-
 
 @end
