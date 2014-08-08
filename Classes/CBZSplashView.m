@@ -69,7 +69,7 @@
 {
   if (!_iconAnimation) {
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
-    animation.values = @[@1, @0.9, @800];
+    animation.values = @[@1, @0.9, @300];
     animation.keyTimes = @[@0, @0.4, @1];
     animation.duration = self.animationDuration;
     animation.removedOnCompletion = NO;
