@@ -5,9 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/CBZSplashView.svg?style=flat)](http://cocoadocs.org/docsets/CBZSplashView)
 [![Platform](https://img.shields.io/cocoapods/p/CBZSplashView.svg?style=flat)](http://cocoadocs.org/docsets/CBZSplashView)
 
-
-## CBZSplashView
-
 Inspired by the Twitter Splash screen.
 
 Create a splash view not dissimilar to the one Twitter use.
@@ -18,7 +15,7 @@ I have also added some customization options if you are that way inclined.
 
 Twitter: <a href="https://twitter.com/callumboddy">@callumboddy</a>
 
-<img src="Images/twitterGif.gif"/>
+<img src="Images/twitter-gif.gif"/>
 
 Easy as pie:
 
@@ -59,21 +56,26 @@ or you can animate on completion if you want to..
 CBZSplashView is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-    pod 'CBZSplashView', '~> 0.1.1'
+    pod 'CBZSplashView', '~> 1.0.0'
 
 
 ## Coming Soon
 
 - creating new and unique transitions to select from
-- ~~a vector based implementation, closer to the twitter implementation~~
 - adding support for a background image.
 - adding support for colorWithPatternImage
 
+- ~~a vector based implementation, closer to the twitter implementation~~
+
 - If you would like to request a new feature, feel free to raise as an issue. 
 
-Thanks to <a href="https://twitter.com/Mazyod">@Mazyod</a> for some great ideas and contributions.
-
 ## Updates
+
+1.0.0
+- feature: full support for bezier paths - which is awesome. Massive thanks to <a href="https://twitter.com/Mazyod">@Mazyod</a>
+- cleanliness
+- bugfixes
+
 
 0.1.1:
 - feature: added propery to manipulate the icon size, eg. splashView.iconStartSize = CGSizeMake(200, 200);
