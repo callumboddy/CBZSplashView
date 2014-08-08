@@ -24,6 +24,7 @@
 		828AF817199500B800C0F1F9 /* UIBezierPath+Shapes.m in Sources */ = {isa = PBXBuildFile; fileRef = 828AF816199500B800C0F1F9 /* UIBezierPath+Shapes.m */; };
 		828AF8201995074900C0F1F9 /* dummy_view@2x.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 828AF81F1995074900C0F1F9 /* dummy_view@2x.PNG */; };
 		9F746C79C28D4CABBC81D2F5 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 796CA811008E499A957BEFCE /* libPods-Tests.a */; };
+		C12CADC219952058004079BC /* slack_for_ios_upload.png in Resources */ = {isa = PBXBuildFile; fileRef = C12CADC119952058004079BC /* slack_for_ios_upload.png */; };
 		C158469D197EABB100BCE2AB /* CBZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C158469C197EABB100BCE2AB /* CBZAppDelegate.m */; };
 		C15846AD197EABD800BCE2AB /* snapchatIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C15846A9197EABD800BCE2AB /* snapchatIcon.png */; };
 		C15846AE197EABD800BCE2AB /* twitterIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C15846AA197EABD800BCE2AB /* twitterIcon.png */; };
@@ -69,6 +70,7 @@
 		828AF81F1995074900C0F1F9 /* dummy_view@2x.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dummy_view@2x.PNG"; sourceTree = "<group>"; };
 		B64FB19BAFF04F5B891B6AAF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C12CADBE1994CAD0004079BC /* CBZSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBZSplashView.h; path = ../../Classes/CBZSplashView.h; sourceTree = "<group>"; };
+		C12CADC119952058004079BC /* slack_for_ios_upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slack_for_ios_upload.png; sourceTree = "<group>"; };
 		C158469B197EABB100BCE2AB /* CBZAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBZAppDelegate.h; path = Application/CBZAppDelegate.h; sourceTree = "<group>"; };
 		C158469C197EABB100BCE2AB /* CBZAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBZAppDelegate.m; path = Application/CBZAppDelegate.m; sourceTree = "<group>"; };
 		C15846A5197EABC800BCE2AB /* CBZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBZViewController.h; path = Classes/CBZViewController.h; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 		C15846B0197EABE400BCE2AB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C12CADC119952058004079BC /* slack_for_ios_upload.png */,
 				828AF81F1995074900C0F1F9 /* dummy_view@2x.PNG */,
 				C15846A9197EABD800BCE2AB /* snapchatIcon.png */,
 				C15846AA197EABD800BCE2AB /* twitterIcon.png */,
@@ -299,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12CADC219952058004079BC /* slack_for_ios_upload.png in Resources */,
 				C15846B5197EAD7D00BCE2AB /* CBZSplashView-Info.plist in Resources */,
 				C15846AD197EABD800BCE2AB /* snapchatIcon.png in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,

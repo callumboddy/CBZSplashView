@@ -7,78 +7,45 @@
 //
 
 #import "CBZSplashView.h"
-
-@interface CBZSplashView ()
-@property (nonatomic, strong) UIColor *backgroundViewColor;
-@property (nonatomic, strong) UIImage *iconImage;
-@property (strong, nonatomic) UIImageView *iconImageView;
-@end
+#import "CBZRasterSplashView.h"
+#import "CBZVectorSplashView.h"
 
 
 @implementation CBZSplashView
 
-- (instancetype)initWithIcon:(UIImage *)icon backgroundColor:(UIColor *)backgroundColor
-{
-  self = [super init];
-  if (self) {
-    _iconImage = icon;
-    _backgroundViewColor = backgroundColor;
-  }
-  return self;
-}
+#pragma mark - Factory methods
 
-- (void)willMoveToSuperview:(UIView *)newSuperview
++ (instancetype)splashViewWithIcon:(UIImage *)icon backgroundColor:(UIColor *)backgroundColor
 {
-  if (!newSuperview) {
-    return;
-  }
-  [self setupViewWithBackgroundColor:self.backgroundViewColor];
-}
-
-- (void)setupViewWithBackgroundColor:(UIColor *)backgroundColor
-{
-  if (!backgroundColor) {
-    return;
-  }
+  /* This component is useless without an icon */
+  NSParameterAssert(icon);
   
-  self.frame = [UIApplication sharedApplication].keyWindow.frame;
-  self.backgroundColor = self.backgroundViewColor;
-
-  self.iconImageView = [UIImageView new];
-  self.iconImageView.image = [self.iconImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-  self.iconImageView.tintColor = self.iconColor;
-  self.iconImageView.frame = CGRectMake(0, 0, self.iconStartSize.width, self.iconStartSize.height);
-  self.iconImageView.contentMode = UIViewContentModeScaleAspectFit;
-  self.iconImageView.center = self.center;
-  
-  [self addSubview:self.iconImageView];
+  return [[CBZRasterSplashView alloc] initWithIconImage:icon backgroundColor:backgroundColor];
 }
+
++ (instancetype)splashViewWithBezierPath:(UIBezierPath *)bezier backgroundColor:(UIColor *)backgroundColor
+{
+  return [[CBZVectorSplashView alloc] initWithBezierPath:bezier backgroundColor:backgroundColor];
+}
+
+#pragma mark - Init & Dealloc
+
+- (instancetype)init
+{
+  return [super initWithFrame:[[UIScreen mainScreen] bounds]];
+}
+
+#pragma mark - Public methods
 
 - (void)startAnimation
 {
-  __block __weak typeof(self) weakSelf = self;
-  
-  if (!self.animationDuration) {
-    return;
-  }
-  
-  CGFloat shrinkDuration = self.animationDuration * 0.3;
-  CGFloat growDuration = self.animationDuration * 0.7;
-  
-  [UIView animateWithDuration:shrinkDuration delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-    CGAffineTransform scaleTransform = CGAffineTransformMakeScale(0.75, 0.75);
-    weakSelf.iconImageView.transform = scaleTransform;
-  } completion:^(BOOL finished) {
-    [UIView animateWithDuration:growDuration animations:^{
-      CGAffineTransform scaleTransform = CGAffineTransformMakeScale(30, 30);
-      weakSelf.iconImageView.transform = scaleTransform;
-      weakSelf.alpha = 0;
-    } completion:^(BOOL finished) {
-      [weakSelf removeFromSuperview];
-    }];
-  }];
+  [self startAnimationWithCompletionHandler:nil];
 }
 
+- (void)startAnimationWithCompletionHandler:(void(^)())completionHandler;
+{
+  NSAssert(NO, @"Override me!");
+}
 
 #pragma mark - property getters
 
@@ -93,9 +60,26 @@
 - (CGFloat)animationDuration
 {
   if (!_animationDuration) {
-    _animationDuration = 1.2f;
+    _animationDuration = 1.0f;
   }
   return _animationDuration;
+}
+
+- (CAAnimation *)iconAnimation
+{
+  if (!_iconAnimation) {
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+    animation.values = @[@1, @0.9, @300];
+    animation.keyTimes = @[@0, @0.4, @1];
+    animation.duration = self.animationDuration;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    animation.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                  [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
+    
+    _iconAnimation = animation;
+  }
+  return _iconAnimation;
 }
 
 - (UIColor *)iconColor
@@ -105,7 +89,5 @@
   }
   return _iconColor;
 }
-
-
 
 @end
