@@ -40,16 +40,24 @@ or you can animate on completion if you want to..
   }];
 ```
 
-## Usage
-
-To run the example project, clone the repo, and run.
-
 ## Installation
 
 CBZSplashView is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
     pod 'CBZSplashView', '~> 0.1.1'
+
+
+## Coming Soon
+
+- creating new and unique transitions to select from
+- a vector based implementation, closer to the twitter implementation
+- adding support for a background image.
+- adding support for colorWithPatternImage
+
+- If you would like to request a new feature, feel free to raise as an issue. 
+
+Thanks to <a href="https://twitter.com/Mazyod">@Mazyod</a> for some great ideas and contributions.
 
 ## Updates
 
