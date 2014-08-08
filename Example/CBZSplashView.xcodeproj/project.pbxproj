@@ -17,10 +17,10 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		828AF80C1994FB9B00C0F1F9 /* CBZSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 828AF80B1994FB9B00C0F1F9 /* CBZSplashView.m */; };
+		828AF8141994FD6D00C0F1F9 /* CBZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C15846A6197EABC800BCE2AB /* CBZViewController.m */; };
 		9F746C79C28D4CABBC81D2F5 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 796CA811008E499A957BEFCE /* libPods-Tests.a */; };
-		C12CADC01994CAD0004079BC /* CBZSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = C12CADBF1994CAD0004079BC /* CBZSplashView.m */; };
 		C158469D197EABB100BCE2AB /* CBZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C158469C197EABB100BCE2AB /* CBZAppDelegate.m */; };
-		C15846A8197EABC800BCE2AB /* CBZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C15846A6197EABC800BCE2AB /* CBZViewController.m */; };
 		C15846AD197EABD800BCE2AB /* snapchatIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C15846A9197EABD800BCE2AB /* snapchatIcon.png */; };
 		C15846AE197EABD800BCE2AB /* twitterIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C15846AA197EABD800BCE2AB /* twitterIcon.png */; };
 		C15846AF197EABD800BCE2AB /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = C15846AC197EABD800BCE2AB /* UIColor+HexString.m */; };
@@ -55,9 +55,9 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		796CA811008E499A957BEFCE /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		828AF80B1994FB9B00C0F1F9 /* CBZSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBZSplashView.m; path = ../../Classes/CBZSplashView.m; sourceTree = "<group>"; };
 		B64FB19BAFF04F5B891B6AAF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		C12CADBE1994CAD0004079BC /* CBZSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBZSplashView.h; path = Classes/CBZSplashView.h; sourceTree = "<group>"; };
-		C12CADBF1994CAD0004079BC /* CBZSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBZSplashView.m; path = Classes/CBZSplashView.m; sourceTree = "<group>"; };
+		C12CADBE1994CAD0004079BC /* CBZSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBZSplashView.h; path = ../../Classes/CBZSplashView.h; sourceTree = "<group>"; };
 		C158469B197EABB100BCE2AB /* CBZAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBZAppDelegate.h; path = Application/CBZAppDelegate.h; sourceTree = "<group>"; };
 		C158469C197EABB100BCE2AB /* CBZAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBZAppDelegate.m; path = Application/CBZAppDelegate.m; sourceTree = "<group>"; };
 		C15846A5197EABC800BCE2AB /* CBZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBZViewController.h; path = Classes/CBZViewController.h; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				C12CADBE1994CAD0004079BC /* CBZSplashView.h */,
-				C12CADBF1994CAD0004079BC /* CBZSplashView.m */,
+				828AF80B1994FB9B00C0F1F9 /* CBZSplashView.m */,
 				C15846B7197EAE5D00BCE2AB /* Main_iPad.storyboard */,
 				C15846B8197EAE5D00BCE2AB /* Main_iPhone.storyboard */,
 				C15846B0197EABE400BCE2AB /* Images */,
@@ -341,9 +341,9 @@
 			files = (
 				C15846B6197EAD7D00BCE2AB /* main.m in Sources */,
 				C15846AF197EABD800BCE2AB /* UIColor+HexString.m in Sources */,
-				C12CADC01994CAD0004079BC /* CBZSplashView.m in Sources */,
-				C15846A8197EABC800BCE2AB /* CBZViewController.m in Sources */,
 				C158469D197EABB100BCE2AB /* CBZAppDelegate.m in Sources */,
+				828AF8141994FD6D00C0F1F9 /* CBZViewController.m in Sources */,
+				828AF80C1994FB9B00C0F1F9 /* CBZSplashView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
