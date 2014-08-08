@@ -8,6 +8,9 @@
 
 #import "CBZSplashView.h"
 
+/**
+ *  RasterSplash animates in a rasterized UIImage while fading the whole view
+ */
 @interface CBZRasterSplashView : CBZSplashView
 
 - (instancetype)initWithIconImage:(UIImage *)icon backgroundColor:(UIColor *)color;

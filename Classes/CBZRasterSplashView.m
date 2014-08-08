@@ -31,6 +31,8 @@
         iconImageView.center = self.center;
         
         [self addSubview:iconImageView];
+        
+        _iconImageView = iconImageView;
     }
     return self;
 }
@@ -46,11 +48,11 @@
     CGFloat shrinkDuration = self.animationDuration * 0.3;
     CGFloat growDuration = self.animationDuration * 0.7;
     
-    [UIView animateWithDuration:shrinkDuration delay:0 usingSpringWithDamping:1.f initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:shrinkDuration delay:0 usingSpringWithDamping:0.7f initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         CGAffineTransform scaleTransform = CGAffineTransformMakeScale(0.75, 0.75);
         weakSelf.iconImageView.transform = scaleTransform;
     } completion:^(BOOL finished) {
-        [UIView animateWithDuration:growDuration /*delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:15 options:UIViewAnimationOptionCurveEaseIn*/ animations:^{
+        [UIView animateWithDuration:growDuration animations:^{
             CGAffineTransform scaleTransform = CGAffineTransformMakeScale(20, 20);
             weakSelf.iconImageView.transform = scaleTransform;
             weakSelf.alpha = 0;

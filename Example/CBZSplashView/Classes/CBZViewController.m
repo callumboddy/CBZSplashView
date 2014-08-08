@@ -33,7 +33,7 @@ static NSString * const kSnapchatColor = @"FFCC00";
   UIImage *icon = [UIImage imageNamed:@"twitterIcon"];
   UIColor *color = [UIColor colorWithHexString:kTwitterColor];
   
-  CBZSplashView *splashView = [[CBZSplashView alloc] initWithIcon:icon backgroundColor:color];
+  CBZSplashView *splashView = [CBZSplashView splashViewWithIcon:icon backgroundColor:color];
  
   splashView.animationDuration = 1.4;
   

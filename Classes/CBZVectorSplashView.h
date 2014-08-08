@@ -8,6 +8,9 @@
 
 #import "CBZSplashView.h"
 
+/**
+ *  VectorSplash uses a UIBezierPath to carve a mask in the middle that expands while revealing the content behind it.
+ */
 @interface CBZVectorSplashView : CBZSplashView
 
 - (instancetype)initWithBezierPath:(UIBezierPath *)bezier backgroundColor:(UIColor *)backgroundColor;
