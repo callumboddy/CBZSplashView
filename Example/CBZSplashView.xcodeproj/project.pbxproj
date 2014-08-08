@@ -18,7 +18,11 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		828AF80C1994FB9B00C0F1F9 /* CBZSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 828AF80B1994FB9B00C0F1F9 /* CBZSplashView.m */; };
-		828AF8141994FD6D00C0F1F9 /* CBZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C15846A6197EABC800BCE2AB /* CBZViewController.m */; };
+		828AF8111994FCB400C0F1F9 /* CBZRasterSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 828AF80E1994FCB400C0F1F9 /* CBZRasterSplashView.m */; };
+		828AF8121994FCB400C0F1F9 /* CBZVectorSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 828AF8101994FCB400C0F1F9 /* CBZVectorSplashView.m */; };
+		828AF8131994FD1200C0F1F9 /* CBZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C15846A6197EABC800BCE2AB /* CBZViewController.m */; };
+		828AF817199500B800C0F1F9 /* UIBezierPath+Shapes.m in Sources */ = {isa = PBXBuildFile; fileRef = 828AF816199500B800C0F1F9 /* UIBezierPath+Shapes.m */; };
+		828AF8201995074900C0F1F9 /* dummy_view@2x.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 828AF81F1995074900C0F1F9 /* dummy_view@2x.PNG */; };
 		9F746C79C28D4CABBC81D2F5 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 796CA811008E499A957BEFCE /* libPods-Tests.a */; };
 		C158469D197EABB100BCE2AB /* CBZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C158469C197EABB100BCE2AB /* CBZAppDelegate.m */; };
 		C15846AD197EABD800BCE2AB /* snapchatIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C15846A9197EABD800BCE2AB /* snapchatIcon.png */; };
@@ -56,12 +60,19 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		796CA811008E499A957BEFCE /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		828AF80B1994FB9B00C0F1F9 /* CBZSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBZSplashView.m; path = ../../Classes/CBZSplashView.m; sourceTree = "<group>"; };
+		828AF80D1994FCB400C0F1F9 /* CBZRasterSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBZRasterSplashView.h; path = ../../Classes/CBZRasterSplashView.h; sourceTree = "<group>"; };
+		828AF80E1994FCB400C0F1F9 /* CBZRasterSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBZRasterSplashView.m; path = ../../Classes/CBZRasterSplashView.m; sourceTree = "<group>"; };
+		828AF80F1994FCB400C0F1F9 /* CBZVectorSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBZVectorSplashView.h; path = ../../Classes/CBZVectorSplashView.h; sourceTree = "<group>"; };
+		828AF8101994FCB400C0F1F9 /* CBZVectorSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBZVectorSplashView.m; path = ../../Classes/CBZVectorSplashView.m; sourceTree = "<group>"; };
+		828AF815199500B800C0F1F9 /* UIBezierPath+Shapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Shapes.h"; sourceTree = "<group>"; };
+		828AF816199500B800C0F1F9 /* UIBezierPath+Shapes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Shapes.m"; sourceTree = "<group>"; };
+		828AF81F1995074900C0F1F9 /* dummy_view@2x.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dummy_view@2x.PNG"; sourceTree = "<group>"; };
 		B64FB19BAFF04F5B891B6AAF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C12CADBE1994CAD0004079BC /* CBZSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBZSplashView.h; path = ../../Classes/CBZSplashView.h; sourceTree = "<group>"; };
 		C158469B197EABB100BCE2AB /* CBZAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBZAppDelegate.h; path = Application/CBZAppDelegate.h; sourceTree = "<group>"; };
 		C158469C197EABB100BCE2AB /* CBZAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBZAppDelegate.m; path = Application/CBZAppDelegate.m; sourceTree = "<group>"; };
 		C15846A5197EABC800BCE2AB /* CBZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBZViewController.h; path = Classes/CBZViewController.h; sourceTree = "<group>"; };
-		C15846A6197EABC800BCE2AB /* CBZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBZViewController.m; path = Classes/CBZViewController.m; sourceTree = "<group>"; };
+		C15846A6197EABC800BCE2AB /* CBZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; name = CBZViewController.m; path = Classes/CBZViewController.m; sourceTree = "<group>"; };
 		C15846A9197EABD800BCE2AB /* snapchatIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = snapchatIcon.png; path = SupportingFiles/snapchatIcon.png; sourceTree = "<group>"; };
 		C15846AA197EABD800BCE2AB /* twitterIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitterIcon.png; path = SupportingFiles/twitterIcon.png; sourceTree = "<group>"; };
 		C15846AB197EABD800BCE2AB /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "SupportingFiles/UIColor+HexString.h"; sourceTree = "<group>"; };
@@ -138,11 +149,17 @@
 			children = (
 				C12CADBE1994CAD0004079BC /* CBZSplashView.h */,
 				828AF80B1994FB9B00C0F1F9 /* CBZSplashView.m */,
+				828AF80D1994FCB400C0F1F9 /* CBZRasterSplashView.h */,
+				828AF80E1994FCB400C0F1F9 /* CBZRasterSplashView.m */,
+				828AF80F1994FCB400C0F1F9 /* CBZVectorSplashView.h */,
+				828AF8101994FCB400C0F1F9 /* CBZVectorSplashView.m */,
 				C15846B7197EAE5D00BCE2AB /* Main_iPad.storyboard */,
 				C15846B8197EAE5D00BCE2AB /* Main_iPhone.storyboard */,
 				C15846B0197EABE400BCE2AB /* Images */,
 				C15846AB197EABD800BCE2AB /* UIColor+HexString.h */,
 				C15846AC197EABD800BCE2AB /* UIColor+HexString.m */,
+				828AF815199500B800C0F1F9 /* UIBezierPath+Shapes.h */,
+				828AF816199500B800C0F1F9 /* UIBezierPath+Shapes.m */,
 				C15846A5197EABC800BCE2AB /* CBZViewController.h */,
 				C15846A6197EABC800BCE2AB /* CBZViewController.m */,
 				C158469B197EABB100BCE2AB /* CBZAppDelegate.h */,
@@ -196,6 +213,7 @@
 		C15846B0197EABE400BCE2AB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				828AF81F1995074900C0F1F9 /* dummy_view@2x.PNG */,
 				C15846A9197EABD800BCE2AB /* snapchatIcon.png */,
 				C15846AA197EABD800BCE2AB /* twitterIcon.png */,
 			);
@@ -285,6 +303,7 @@
 				C15846AD197EABD800BCE2AB /* snapchatIcon.png in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				C15846B9197EAE5D00BCE2AB /* Main_iPad.storyboard in Resources */,
+				828AF8201995074900C0F1F9 /* dummy_view@2x.PNG in Resources */,
 				C15846AE197EABD800BCE2AB /* twitterIcon.png in Resources */,
 				C15846BA197EAE5D00BCE2AB /* Main_iPhone.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -341,9 +360,12 @@
 			files = (
 				C15846B6197EAD7D00BCE2AB /* main.m in Sources */,
 				C15846AF197EABD800BCE2AB /* UIColor+HexString.m in Sources */,
+				828AF8121994FCB400C0F1F9 /* CBZVectorSplashView.m in Sources */,
+				828AF817199500B800C0F1F9 /* UIBezierPath+Shapes.m in Sources */,
 				C158469D197EABB100BCE2AB /* CBZAppDelegate.m in Sources */,
-				828AF8141994FD6D00C0F1F9 /* CBZViewController.m in Sources */,
+				828AF8131994FD1200C0F1F9 /* CBZViewController.m in Sources */,
 				828AF80C1994FB9B00C0F1F9 /* CBZSplashView.m in Sources */,
+				828AF8111994FCB400C0F1F9 /* CBZRasterSplashView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
