@@ -48,7 +48,7 @@ static NSString * const kSnapchatColor = @"FFCC00";
   [super viewDidAppear:animated];
   
   /* wait a beat before animating in */
-  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
       [self.splashView startAnimation];
   });
 }
