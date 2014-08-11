@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "CBZSplashView"
-  s.version          = “1.0.0”
+  s.version          = "1.0.0"
   s.summary          = "A Twitter like Splash View"
   s.description      = <<-DESC
                         A Twitter like Splash View
