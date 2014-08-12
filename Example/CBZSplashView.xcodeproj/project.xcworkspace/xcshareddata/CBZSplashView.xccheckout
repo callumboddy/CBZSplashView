@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E545D59E-5F86-403F-947C-31496E2EA152</string>
+	<string>36ED771E-134F-4ADB-8F58-6180D2B8B57F</string>
 	<key>IDESourceControlProjectName</key>
 	<string>CBZSplashView</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D7D323FC-9393-4449-AB0B-FD1CB90FCF36</key>
-		<string>ssh://github.com/rvirin/CBZSplashView.git</string>
+		<key>9EF19B3F-7899-4265-9DF5-CF67660D6103</key>
+		<string>https://github.com/callumboddy/CBZSplashView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Example/CBZSplashView.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D7D323FC-9393-4449-AB0B-FD1CB90FCF36</key>
+		<key>9EF19B3F-7899-4265-9DF5-CF67660D6103</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/rvirin/CBZSplashView.git</string>
+	<string>https://github.com/callumboddy/CBZSplashView.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D7D323FC-9393-4449-AB0B-FD1CB90FCF36</string>
+	<string>9EF19B3F-7899-4265-9DF5-CF67660D6103</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D7D323FC-9393-4449-AB0B-FD1CB90FCF36</string>
+			<string>9EF19B3F-7899-4265-9DF5-CF67660D6103</string>
 			<key>IDESourceControlWCCName</key>
 			<string>CBZSplashView</string>
 		</dict>
