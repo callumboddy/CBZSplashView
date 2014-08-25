@@ -30,6 +30,8 @@
         iconImageView.contentMode = UIViewContentModeScaleAspectFit;
         iconImageView.center = self.center;
         
+        self.firstScaleTransform  = CGAffineTransformMakeScale(0.75, 0.75);
+        self.secondScaleTransform = CGAffineTransformMakeScale(20, 20);
         [self addSubview:iconImageView];
         
         _iconImageView = iconImageView;
@@ -49,11 +51,11 @@
     CGFloat growDuration = self.animationDuration * 0.7;
     
     [UIView animateWithDuration:shrinkDuration delay:0 usingSpringWithDamping:0.7f initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        CGAffineTransform scaleTransform = CGAffineTransformMakeScale(0.75, 0.75);
+        CGAffineTransform scaleTransform = self.firstScaleTransform;
         weakSelf.iconImageView.transform = scaleTransform;
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:growDuration animations:^{
-            CGAffineTransform scaleTransform = CGAffineTransformMakeScale(20, 20);
+            CGAffineTransform scaleTransform = self.secondScaleTransform;
             weakSelf.iconImageView.transform = scaleTransform;
             weakSelf.alpha = 0;
         } completion:^(BOOL finished) {
