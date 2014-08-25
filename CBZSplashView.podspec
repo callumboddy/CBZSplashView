@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "CBZSplashView"
-  s.version          = "1.0.0"
+  s.version          = "1.0.4"
   s.summary          = "A Twitter like Splash View"
   s.description      = <<-DESC
                         A Twitter like Splash View
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/rvirin/CBZSplashView"
   s.license          = 'MIT'
   s.author           = { "Callum Boddy" => "callum.boddy@gmail.com" }
-  s.source           = { :git => "https://github.com/rvirin/CBZSplashView.git", :tag => '1.0.3'}
+  s.source           = { :git => "https://github.com/rvirin/CBZSplashView.git", :tag => '1.0.4'}
   # s.social_media_url = 'https://twitter.com/callumboddy'
   s.platform     = :ios, '6.0'
   s.requires_arc = true
