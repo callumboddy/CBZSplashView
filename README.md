@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/CBZSplashView.svg?style=flat)](http://cocoadocs.org/docsets/CBZSplashView)
 [![Platform](https://img.shields.io/cocoapods/p/CBZSplashView.svg?style=flat)](http://cocoadocs.org/docsets/CBZSplashView)
 
+<img src="Images/CBZLogo.png" height="28%" width="28%" />
+
 Inspired by the Twitter Splash screen.
 
 Create a splash view not dissimilar to the one Twitter use.
