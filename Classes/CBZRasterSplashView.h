@@ -15,4 +15,7 @@
 
 - (instancetype)initWithIconImage:(UIImage *)icon backgroundColor:(UIColor *)color;
 
+@property (nonatomic, assign) CGAffineTransform startTransform;
+@property (nonatomic, assign) CGAffineTransform endTransform;
+
 @end
