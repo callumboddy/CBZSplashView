@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C63EE5A71BBA0EFB008F46BB /* CBZRasterSplashView.h in Headers */ = {isa = PBXBuildFile; fileRef = C63EE5A01BBA0EFB008F46BB /* CBZRasterSplashView.h */; settings = {ASSET_TAGS = (); }; };
+		C63EE5A71BBA0EFB008F46BB /* CBZRasterSplashView.h in Headers */ = {isa = PBXBuildFile; fileRef = C63EE5A01BBA0EFB008F46BB /* CBZRasterSplashView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C63EE5A81BBA0EFB008F46BB /* CBZRasterSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = C63EE5A11BBA0EFB008F46BB /* CBZRasterSplashView.m */; settings = {ASSET_TAGS = (); }; };
-		C63EE5A91BBA0EFB008F46BB /* CBZSplashView.h in Headers */ = {isa = PBXBuildFile; fileRef = C63EE5A21BBA0EFB008F46BB /* CBZSplashView.h */; settings = {ASSET_TAGS = (); }; };
+		C63EE5A91BBA0EFB008F46BB /* CBZSplashView.h in Headers */ = {isa = PBXBuildFile; fileRef = C63EE5A21BBA0EFB008F46BB /* CBZSplashView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C63EE5AA1BBA0EFB008F46BB /* CBZSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = C63EE5A31BBA0EFB008F46BB /* CBZSplashView.m */; settings = {ASSET_TAGS = (); }; };
-		C63EE5AB1BBA0EFB008F46BB /* CBZVectorSplashView.h in Headers */ = {isa = PBXBuildFile; fileRef = C63EE5A41BBA0EFB008F46BB /* CBZVectorSplashView.h */; settings = {ASSET_TAGS = (); }; };
+		C63EE5AB1BBA0EFB008F46BB /* CBZVectorSplashView.h in Headers */ = {isa = PBXBuildFile; fileRef = C63EE5A41BBA0EFB008F46BB /* CBZVectorSplashView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C63EE5AC1BBA0EFB008F46BB /* CBZVectorSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = C63EE5A51BBA0EFB008F46BB /* CBZVectorSplashView.m */; settings = {ASSET_TAGS = (); }; };
 		C63EE5AD1BBA0EFB008F46BB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C63EE5A61BBA0EFB008F46BB /* Info.plist */; settings = {ASSET_TAGS = (); }; };
+		C68341481BBAE617001F3851 /* CBZSplashView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C68341471BBAE617001F3851 /* CBZSplashView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		C63EE5A41BBA0EFB008F46BB /* CBZVectorSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBZVectorSplashView.h; path = Classes/CBZVectorSplashView.h; sourceTree = SOURCE_ROOT; };
 		C63EE5A51BBA0EFB008F46BB /* CBZVectorSplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBZVectorSplashView.m; path = Classes/CBZVectorSplashView.m; sourceTree = SOURCE_ROOT; };
 		C63EE5A61BBA0EFB008F46BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		C68341471BBAE617001F3851 /* CBZSplashView-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CBZSplashView-umbrella.h"; path = "Classes/CBZSplashView-umbrella.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				C63EE5A41BBA0EFB008F46BB /* CBZVectorSplashView.h */,
 				C63EE5A51BBA0EFB008F46BB /* CBZVectorSplashView.m */,
 				C63EE5A61BBA0EFB008F46BB /* Info.plist */,
+				C68341471BBAE617001F3851 /* CBZSplashView-umbrella.h */,
 			);
 			path = CBZSplashView;
 			sourceTree = "<group>";
@@ -75,6 +78,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C68341481BBAE617001F3851 /* CBZSplashView-umbrella.h in Headers */,
 				C63EE5A91BBA0EFB008F46BB /* CBZSplashView.h in Headers */,
 				C63EE5A71BBA0EFB008F46BB /* CBZRasterSplashView.h in Headers */,
 				C63EE5AB1BBA0EFB008F46BB /* CBZVectorSplashView.h in Headers */,
