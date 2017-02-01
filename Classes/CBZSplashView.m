@@ -10,6 +10,9 @@
 #import "CBZRasterSplashView.h"
 #import "CBZVectorSplashView.h"
 
+FOUNDATION_EXPORT double CBZSplashViewVersionNumber;
+FOUNDATION_EXPORT const unsigned char CBZSplashViewVersionString[];
+
 
 @implementation CBZSplashView
 
